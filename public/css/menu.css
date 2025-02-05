@@ -1,0 +1,148 @@
+/* 
+Proyecto: Menu de Restaurante Web
+Desarrollado por: Fabian Guerrero
+Fecha: 2025
+*/
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url('../img/Restaurantes.png');
+}
+
+/* Imagen  */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+}
+
+.circular-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Boton de link */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 6em;
+    transition: all 0.2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+}
+  
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+  
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+  
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+  
+.btn::after {
+    background-color: #fff;
+}
+  
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+/* pie de pagina */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+
+/* Estilos para pantallas pequeñas (celulares) */
+@media (max-width: 600px) {
+    .circular-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 10px 30px;
+    }
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .circular-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 10px 30px;
+    }
+}
+
+/* Estilos para pantallas grandes (computadoras) */
+@media (min-width: 1025px) {
+    .circular-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 10px 30px;
+    }
+}
